@@ -1,0 +1,1311 @@
+
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2000-08-23 05:49:14+08:00.
+<HUAWEI>
+<HUAWEI>system-view
+Enter system view, return user view with Ctrl+Z.
+[HUAWEI]user-interface vty 0 4
+[HUAWEI-ui-vty0-4]screen-length 0
+[HUAWEI-ui-vty0-4]quit
+[HUAWEI]quit
+<HUAWEI>
+<HUAWEI>display current
+!Software Version V200R010C00SPC600
+#
+sysname HUAWEI
+#
+info-center loghost 192.168.5.250
+#
+vlan batch 23 71 123
+#
+stp disable
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+telnet server enable
+#
+clock timezone bj add 08:00:00
+#
+dhcp enable
+#
+dhcp snooping enable ipv4
+#
+radius-server template default
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user admin password irreversible-cipher $1a$r^@l;5MRt@$5e171Y)GrAy636Yn|';1Hg>gBY`58%SC_06U3)hP$
+ local-user admin privilege level 15
+ local-user admin service-type telnet terminal
+#
+interface Vlanif1
+ ip address 172.16.0.52 255.255.255.0
+#
+interface GigabitEthernet3/0/1
+ description 11
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/2
+ description 12
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/3
+ description 13
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/4
+ description 14
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/5
+ description 15
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/6
+ description 16
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/7
+ description 17
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/8
+ description 18
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/9
+ description 19
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/10
+ description 20
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/11
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/12
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/13
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/14
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/15
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/16
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/17
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/18
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/19
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/20
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/21
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/22
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/23
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/24
+ port link-type access
+ port default vlan 23
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/25
+ port link-type access
+ port default vlan 123
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+interface GigabitEthernet3/0/26
+ shutdown
+#
+interface GigabitEthernet3/0/27
+ shutdown
+#
+interface GigabitEthernet3/0/28
+ shutdown
+#
+interface GigabitEthernet3/0/29
+ shutdown
+#
+interface GigabitEthernet3/0/30
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/31
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/32
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/33
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/34
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/35
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/36
+ description Tel
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/37
+ shutdown
+#
+interface GigabitEthernet3/0/38
+ shutdown
+#
+interface GigabitEthernet3/0/39
+ shutdown
+#
+interface GigabitEthernet3/0/40
+ shutdown
+#
+interface GigabitEthernet3/0/41
+ shutdown
+#
+interface GigabitEthernet3/0/42
+ shutdown
+#
+interface GigabitEthernet3/0/43
+ shutdown
+#
+interface GigabitEthernet3/0/44
+ shutdown
+#
+interface GigabitEthernet3/0/45
+ shutdown
+#
+interface GigabitEthernet3/0/46
+ shutdown
+#
+interface GigabitEthernet3/0/47
+ shutdown
+#
+interface GigabitEthernet3/0/48
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet3/0/49
+ shutdown
+#
+interface GigabitEthernet3/0/50
+ shutdown
+#
+interface GigabitEthernet3/0/51
+#
+interface GigabitEthernet3/0/52
+#
+interface NULL0
+#
+cpu-defend policy 1
+#
+ip route-static 0.0.0.0 0.0.0.0 172.16.0.2
+#
+cpu-defend-policy 1 global
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ screen-length 0
+ protocol inbound telnet
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
+<HUAWEI>display interface brief
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+InUti/OutUti: input utility/output utility
+Interface                   PHY   Protocol  InUti OutUti   inErrors  outErrors
+GigabitEthernet3/0/1        up    up           0%  0.13%          0          0
+GigabitEthernet3/0/2        up    up           0%  0.13%          0          0
+GigabitEthernet3/0/3        up    up           0%  1.29%          0          0
+GigabitEthernet3/0/4        up    up           0%  0.13%          0          0
+GigabitEthernet3/0/5        down  down         0%     0%          0          0
+GigabitEthernet3/0/6        up    up           0%  0.01%   22749589          0
+GigabitEthernet3/0/7        up    up           0%  0.02%          0          0
+GigabitEthernet3/0/8        down  down         0%     0%          0          0
+GigabitEthernet3/0/9        down  down         0%     0%          0          0
+GigabitEthernet3/0/10       down  down         0%     0%          0          0
+GigabitEthernet3/0/11       up    up           0%  0.02%          0          0
+GigabitEthernet3/0/12       down  down         0%     0%          0          0
+GigabitEthernet3/0/13       down  down         0%     0%          0          0
+GigabitEthernet3/0/14       down  down         0%     0%          0          0
+GigabitEthernet3/0/15       down  down         0%     0%          0          0
+GigabitEthernet3/0/16       down  down         0%     0%          0          0
+GigabitEthernet3/0/17       down  down         0%     0%          0          0
+GigabitEthernet3/0/18       down  down         0%     0%          0          0
+GigabitEthernet3/0/19       down  down         0%     0%          0          0
+GigabitEthernet3/0/20       down  down         0%     0%          0          0
+GigabitEthernet3/0/21       down  down         0%     0%          0          0
+GigabitEthernet3/0/22       down  down         0%     0%          0          0
+GigabitEthernet3/0/23       down  down         0%     0%          0          0
+GigabitEthernet3/0/24       down  down         0%     0%          0          0
+GigabitEthernet3/0/25       down  down         0%     0%          0          0
+GigabitEthernet3/0/26       *down down         0%     0%          0          0
+GigabitEthernet3/0/27       *down down         0%     0%          0          0
+GigabitEthernet3/0/28       *down down         0%     0%          0          0
+GigabitEthernet3/0/29       *down down         0%     0%          0          0
+GigabitEthernet3/0/30       up    up           0%  0.02%          0          0
+GigabitEthernet3/0/31       down  down         0%     0%          0          0
+GigabitEthernet3/0/32       down  down         0%     0%          0          0
+GigabitEthernet3/0/33       down  down         0%     0%          0          0
+GigabitEthernet3/0/34       down  down         0%     0%          0          0
+GigabitEthernet3/0/35       down  down         0%     0%          0          0
+GigabitEthernet3/0/36       down  down         0%     0%          0          0
+GigabitEthernet3/0/37       *down down         0%     0%          0          0
+GigabitEthernet3/0/38       *down down         0%     0%          0          0
+GigabitEthernet3/0/39       *down down         0%     0%          0          0
+GigabitEthernet3/0/40       *down down         0%     0%          0          0
+GigabitEthernet3/0/41       *down down         0%     0%          0          0
+GigabitEthernet3/0/42       *down down         0%     0%          0          0
+GigabitEthernet3/0/43       *down down         0%     0%          0          0
+GigabitEthernet3/0/44       *down down         0%     0%          0          0
+GigabitEthernet3/0/45       *down down         0%     0%          0          0
+GigabitEthernet3/0/46       *down down         0%     0%          0          0
+GigabitEthernet3/0/47       *down down         0%     0%          0          0
+GigabitEthernet3/0/48       up    up        0.02%     0%          0          0
+GigabitEthernet3/0/49       *down down         0%     0%          0          0
+GigabitEthernet3/0/50       *down down         0%     0%          0          0
+GigabitEthernet3/0/51       down  down         0%     0%          0          0
+GigabitEthernet3/0/52       down  down         0%     0%          0          0
+NULL0                       up    up(s)        0%     0%          0          0
+Vlanif1                     up    up           --     --          0          0
+<HUAWEI>display ip interface brief
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+The number of interface that is UP in Physical is 2
+The number of interface that is DOWN in Physical is 0
+The number of interface that is UP in Protocol is 2
+The number of interface that is DOWN in Protocol is 0
+
+Interface                         IP Address/Mask      Physical   Protocol  
+NULL0                             unassigned           up         up(s)     
+Vlanif1                           172.16.0.52/24       up         up        
+
+<HUAWEI>display arp
+IP ADDRESS      MAC ADDRESS     EXPIRE(M) TYPE INTERFACE      VPN-INSTANCE      
+                                          VLAN 
+------------------------------------------------------------------------------
+172.16.0.52     80b5-7542-2300            I -  Vlanif1        
+172.16.0.2      48fd-8eec-34b2  20        D-3  GE3/0/48       
+                                          1    
+172.16.0.5      dceb-94b9-fdc0  20        D-3  GE3/0/48       
+                                          1    
+172.16.0.31     38ad-8e8b-9ac0  15        D-3  GE3/0/48       
+                                          1    
+172.16.0.199    4cbd-8f8f-32c8  5         D-3  GE3/0/48       
+                                          1    
+172.16.0.33     38ad-8e8b-9820  13        D-3  GE3/0/48       
+                                          1    
+172.16.0.30     38ad-8e8b-98c0  15        D-3  GE3/0/48       
+                                          1    
+172.16.0.9      9c06-1b91-37a2  20        D-3  GE3/0/48       
+                                          1    
+172.16.0.7      9c06-1b4f-896e  7         D-3  GE3/0/48       
+                                          1    
+172.16.0.8      9c06-1b91-345a  8         D-3  GE3/0/48       
+                                          1    
+172.16.0.6      9c06-1b91-3476  14        D-3  GE3/0/48       
+                                          1    
+172.16.0.11     9c06-1b4f-88aa  19        D-3  GE3/0/48       
+                                          1    
+172.16.0.12     9c06-1b91-3406  19        D-3  GE3/0/48       
+                                          1    
+172.16.0.28     bcc4-9306-0ec0  9         D-3  GE3/0/48       
+                                          1    
+172.16.0.21     8890-8d9e-91c0  10        D-3  GE3/0/48       
+                                          1    
+172.16.0.26     8890-8df2-1a40  9         D-3  GE3/0/48       
+                                          1    
+------------------------------------------------------------------------------
+Total:16        Dynamic:15      Static:0     Interface:1    
+<HUAWEI>display mac-address
+-------------------------------------------------------------------------------
+MAC Address    VLAN/VSI                          Learned-From        Type      
+-------------------------------------------------------------------------------
+0425-c582-f912 1/-                               GE3/0/48            dynamic   
+38ad-8e8b-9820 1/-                               GE3/0/48            dynamic   
+38ad-8e8b-98c0 1/-                               GE3/0/48            dynamic   
+38ad-8e8b-9ac0 1/-                               GE3/0/48            dynamic   
+48fd-8eec-34b2 1/-                               GE3/0/48            dynamic   
+4cbd-8f8f-32c8 1/-                               GE3/0/48            dynamic   
+60fa-9deb-1300 1/-                               GE3/0/48            dynamic   
+60fa-9deb-1302 1/-                               GE3/0/48            dynamic   
+745a-aacd-9a02 1/-                               GE3/0/48            dynamic   
+80b5-7542-2370 1/-                               GE3/0/48            dynamic   
+80b5-7542-2490 1/-                               GE3/0/48            dynamic   
+80b5-7542-3e30 1/-                               GE3/0/48            dynamic   
+80b5-7542-40c0 1/-                               GE3/0/48            dynamic   
+80b5-7542-9ac0 1/-                               GE3/0/48            dynamic   
+9c06-1b4f-88aa 1/-                               GE3/0/48            dynamic   
+9c06-1b91-3406 1/-                               GE3/0/48            dynamic   
+9c06-1b91-3476 1/-                               GE3/0/48            dynamic   
+9c06-1b91-37a2 1/-                               GE3/0/48            dynamic   
+b4c7-99f8-2e8b 1/-                               GE3/0/48            dynamic   
+dceb-94b9-fdc0 1/-                               GE3/0/48            dynamic   
+fc0a-814a-cca4 1/-                               GE3/0/48            dynamic   
+fc0a-814a-cd2c 1/-                               GE3/0/48            dynamic   
+fc0a-814a-ce98 1/-                               GE3/0/48            dynamic   
+fc0a-814a-ce9c 1/-                               GE3/0/48            dynamic   
+fc0a-814a-ceac 1/-                               GE3/0/48            dynamic   
+fc0a-814a-cec8 1/-                               GE3/0/48            dynamic   
+0011-3292-6d45 23/-                              GE3/0/48            dynamic   
+0015-5db8-2d01 23/-                              GE3/0/48            dynamic   
+0015-5db8-2d09 23/-                              GE3/0/48            dynamic   
+0454-53cf-b560 23/-                              GE3/0/48            dynamic   
+0894-ef3b-e6ea 23/-                              GE3/0/48            dynamic   
+107b-4452-6167 23/-                              GE3/0/48            dynamic   
+10dd-b1cd-83bb 23/-                              GE3/0/48            dynamic   
+10dd-b1d4-7eb2 23/-                              GE3/0/48            dynamic   
+14b3-1f01-8f51 23/-                              GE3/0/48            dynamic   
+14b3-1f01-9485 23/-                              GE3/0/48            dynamic   
+14b3-1f01-9edd 23/-                              GE3/0/48            dynamic   
+14b3-1f21-31c5 23/-                              GE3/0/7             dynamic   
+14b3-1f23-c5a4 23/-                              GE3/0/48            dynamic   
+1866-da21-923b 23/-                              GE3/0/48            dynamic   
+1866-daf9-8d52 23/-                              GE3/0/48            dynamic   
+1c39-4724-6ebb 23/-                              GE3/0/48            dynamic   
+3015-5d05-1e16 23/-                              GE3/0/48            dynamic   
+30b4-9eb9-5ecf 23/-                              GE3/0/48            dynamic   
+38c9-8637-254e 23/-                              GE3/0/48            dynamic   
+44e4-ee28-8e07 23/-                              GE3/0/48            dynamic   
+484d-7ece-ae62 23/-                              GE3/0/48            dynamic   
+48fd-8eec-34b9 23/-                              GE3/0/48            dynamic   
+54bf-6484-f5b1 23/-                              GE3/0/48            dynamic   
+6299-7ff8-24ee 23/-                              GE3/0/48            dynamic   
+6400-6a48-d743 23/-                              GE3/0/48            dynamic   
+6400-6a96-221e 23/-                              GE3/0/48            dynamic   
+68f7-28db-ce05 23/-                              GE3/0/48            dynamic   
+787b-8abd-2b8d 23/-                              GE3/0/48            dynamic   
+8890-8dfc-1198 23/-                              GE3/0/48            dynamic   
+989e-6348-a8b2 23/-                              GE3/0/48            dynamic   
+a44c-c82e-51ff 23/-                              GE3/0/48            dynamic   
+ac83-f38b-d33b 23/-                              GE3/0/48            dynamic   
+b059-472a-a3c2 23/-                              GE3/0/48            dynamic   
+b083-fe58-b891 23/-                              GE3/0/48            dynamic   
+b083-fe93-be1b 23/-                              GE3/0/48            dynamic   
+b221-a671-328e 23/-                              GE3/0/48            dynamic   
+b885-84a0-8f2d 23/-                              GE3/0/48            dynamic   
+b8ca-3aa0-0527 23/-                              GE3/0/6             dynamic   
+c85b-762d-bd88 23/-                              GE3/0/48            dynamic   
+d89e-f377-3733 23/-                              GE3/0/48            dynamic   
+d89e-f377-3b35 23/-                              GE3/0/48            dynamic   
+d89e-f37a-2f56 23/-                              GE3/0/11            dynamic   
+e470-b846-bc8e 23/-                              GE3/0/48            dynamic   
+e4b9-7a70-d70c 23/-                              GE3/0/48            dynamic   
+f02f-a768-a6f5 23/-                              GE3/0/48            dynamic   
+f46d-04af-91f2 23/-                              GE3/0/48            dynamic   
+f481-39c7-1c5c 23/-                              GE3/0/48            dynamic   
+fa3f-4584-9dfc 23/-                              GE3/0/48            dynamic   
+fcd7-3381-196e 23/-                              GE3/0/48            dynamic   
+0c38-3e1a-52c0 71/-                              GE3/0/48            dynamic   
+0c38-3e1a-77b6 71/-                              GE3/0/48            dynamic   
+0c38-3e1a-77b9 71/-                              GE3/0/48            dynamic   
+0c38-3e1c-5fa4 71/-                              GE3/0/48            dynamic   
+0c38-3e1c-5fa8 71/-                              GE3/0/30            dynamic   
+48fd-8eec-34bc 71/-                              GE3/0/48            dynamic   
+4cf9-5daf-ea61 71/-                              GE3/0/48            dynamic   
+8890-8dfc-1198 71/-                              GE3/0/48            dynamic   
+f02f-a768-a4dd 71/-                              GE3/0/48            dynamic   
+0c84-dccc-fa2c 123/-                             GE3/0/48            dynamic   
+12cb-6a0a-0b70 123/-                             GE3/0/48            dynamic   
+18bc-5a0a-7930 123/-                             GE3/0/48            dynamic   
+18bc-5a0a-b270 123/-                             GE3/0/48            dynamic   
+18bc-5a74-e7c0 123/-                             GE3/0/48            dynamic   
+2222-43f9-e9f0 123/-                             GE3/0/48            dynamic   
+2424-0ee2-87f1 123/-                             GE3/0/48            dynamic   
+28f0-763a-4094 123/-                             GE3/0/48            dynamic   
+3221-0dd3-f8b1 123/-                             GE3/0/48            dynamic   
+3233-e0fd-1395 123/-                             GE3/0/48            dynamic   
+3a32-3f41-f3fa 123/-                             GE3/0/48            dynamic   
+3c06-3011-310b 123/-                             GE3/0/48            dynamic   
+48fd-8eec-34b4 123/-                             GE3/0/48            dynamic   
+4c02-2025-164d 123/-                             GE3/0/48            dynamic   
+5202-15ef-dcac 123/-                             GE3/0/48            dynamic   
+8890-8dfc-1198 123/-                             GE3/0/48            dynamic   
+9465-9c27-2fcc 123/-                             GE3/0/48            dynamic   
+9465-9c27-431d 123/-                             GE3/0/48            dynamic   
+98ee-cb6e-f95e 123/-                             GE3/0/48            dynamic   
+98f6-21c8-5e6b 123/-                             GE3/0/48            dynamic   
+a0ab-1beb-68c0 123/-                             GE3/0/48            dynamic   
+a45e-60a5-6431 123/-                             GE3/0/48            dynamic   
+a89c-edf4-d3b4 123/-                             GE3/0/48            dynamic   
+b841-a455-cca9 123/-                             GE3/0/48            dynamic   
+ba33-91c5-ffb5 123/-                             GE3/0/48            dynamic   
+bca8-a6c0-648a 123/-                             GE3/0/48            dynamic   
+c03f-d57c-0695 123/-                             GE3/0/48            dynamic   
+c446-1946-1d89 123/-                             GE3/0/48            dynamic   
+d003-4ba7-674d 123/-                             GE3/0/48            dynamic   
+d88a-dc7e-78c6 123/-                             GE3/0/48            dynamic   
+d89c-67ca-7a99 123/-                             GE3/0/48            dynamic   
+e013-b5f3-d689 123/-                             GE3/0/48            dynamic   
+e271-e2b0-103e 123/-                             GE3/0/48            dynamic   
+e446-dae7-f453 123/-                             GE3/0/48            dynamic   
+e4a4-71eb-926d 123/-                             GE3/0/48            dynamic   
+f496-3408-8d65 123/-                             GE3/0/48            dynamic   
+fe17-edf9-6d49 123/-                             GE3/0/48            dynamic   
+
+-------------------------------------------------------------------------------
+Total items displayed = 121 
+
+<HUAWEI>display trapbuffer
+Trapping buffer configuration and contents : enabled
+Allowed max buffer size : 1024
+Actual buffer size : 256
+Channel number : 3 , Channel name : trapbuffer
+Dropped messages : 0
+Overwritten messages : 41031
+Current messages : 256
+
+#Aug 23 2000 05:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 05:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 05:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 05:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 05:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 05:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 05:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 05:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 05:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 05:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 04:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 04:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 03:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 03:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 02:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 02:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 01:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 01:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 23 2000 00:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 23 2000 00:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 23:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 23:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 22:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 22:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 21:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 21:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 20:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 20:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 19:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 19:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 18:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 18:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 17:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 17:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 16:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 16:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 15:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 15:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 14:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 14:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 13:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 13:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 12:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 12:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 11:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 11:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 10:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 10:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:25:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:15:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 09:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 09:05:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 08:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 08:55:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 08:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 08:45:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+#Aug 22 2000 08:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/52 state is down.
+#Aug 22 2000 08:35:59+08:00 HUAWEI FSP/3/STACKPORTISDOWN:OID 1.3.6.1.4.1.2011.5.25.183.1.22.11 Stack port GigabitEthernet3/0/51 state is down.
+<HUAWEI>display alarm history
+A/B/C/D/E/F/G/H/I/J
+A=Sequence, B=RootKindFlag(Independent|RootCause|nonRootCause)
+C=Generating time, D=Clearing time
+E=ID, F=Name, G=Level, H=State
+I=Description information for locating(Para info, Reason info)
+J=RootCause alarm sequence(Only for nonRootCause alarm)
+
+  13/Independent/2000-08-21 05:26:49+08:00/2000-08-21 05:26:53+08:00/0x40c12014/hwPortPhysicalEthHalfDuplexAlarm/Warning/End/OID 1.3.6.1.4.1.2011.5.25.129.2.5.11 The port works in half duplex mode. (EntityPhysicalIndex=57, BaseTrapSeverity=4, BaseTrapProbableCause=1024, BaseTrapEventType=8, EntPhysicalName=GigabitEthernet3/0/1, RelativeResource=interface GigabitEthernet3/0/1)
+  11/Independent/2000-07-18 01:36:59+08:00/2000-07-18 01:37:04+08:00/0x40c12014/hwPortPhysicalEthHalfDuplexAlarm/Warning/End/OID 1.3.6.1.4.1.2011.5.25.129.2.5.11 The port works in half duplex mode. (EntityPhysicalIndex=57, BaseTrapSeverity=4, BaseTrapProbableCause=1024, BaseTrapEventType=8, EntPhysicalName=GigabitEthernet3/0/1, RelativeResource=interface GigabitEthernet3/0/1)
+  9/Independent/2000-04-30 23:52:02+08:00/2000-04-30 23:52:07+08:00/0x40c12014/hwPortPhysicalEthHalfDuplexAlarm/Warning/End/OID 1.3.6.1.4.1.2011.5.25.129.2.5.11 The port works in half duplex mode. (EntityPhysicalIndex=63, BaseTrapSeverity=4, BaseTrapProbableCause=1024, BaseTrapEventType=8, EntPhysicalName=GigabitEthernet3/0/7, RelativeResource=interface GigabitEthernet3/0/7)
+  7/Independent/2000-04-25 06:25:56+08:00/2000-04-25 06:28:30+08:00/0xff542001/hwLdtPortLoopDetect/Warning/End/OID 1.3.6.1.4.1.2011.5.25.174.3.3 Loopback exists on interface(104)GigabitEthernet3/0/48 ( VLAN 1 ), loopback detection status: 4.(1:normal; 2:block; 3:shutdown; 4:trap; 5:nolearn; 6:quitvlan)
+  1/Independent/2000-04-13 04:55:30+08:00/2000-04-13 04:55:34+08:00/0x40c12014/hwPortPhysicalEthHalfDuplexAlarm/Warning/End/OID 1.3.6.1.4.1.2011.5.25.129.2.5.11 The port works in half duplex mode. (EntityPhysicalIndex=57, BaseTrapSeverity=4, BaseTrapProbableCause=1024, BaseTrapEventType=8, EntPhysicalName=GigabitEthernet3/0/1, RelativeResource=interface GigabitEthernet3/0/1)
+<HUAWEI>display interface des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+Interface                     PHY     Protocol Description            
+GE3/0/1                       up      up       11
+GE3/0/2                       up      up       12
+GE3/0/3                       up      up       13
+GE3/0/4                       up      up       14
+GE3/0/5                       down    down     15
+GE3/0/6                       up      up       16
+GE3/0/7                       up      up       17
+GE3/0/8                       down    down     18
+GE3/0/9                       down    down     19
+GE3/0/10                      down    down     20
+GE3/0/11                      up      up       
+GE3/0/12                      down    down     
+GE3/0/13                      down    down     
+GE3/0/14                      down    down     
+GE3/0/15                      down    down     
+GE3/0/16                      down    down     
+GE3/0/17                      down    down     
+GE3/0/18                      down    down     
+GE3/0/19                      down    down     
+GE3/0/20                      down    down     
+GE3/0/21                      down    down     
+GE3/0/22                      down    down     
+GE3/0/23                      down    down     
+GE3/0/24                      down    down     
+GE3/0/25                      down    down     
+GE3/0/26                      *down   down     
+GE3/0/27                      *down   down     
+GE3/0/28                      *down   down     
+GE3/0/29                      *down   down     
+GE3/0/30                      up      up       Tel
+GE3/0/31                      down    down     Tel
+GE3/0/32                      down    down     Tel
+GE3/0/33                      down    down     Tel
+GE3/0/34                      down    down     Tel
+GE3/0/35                      down    down     Tel
+GE3/0/36                      down    down     Tel
+GE3/0/37                      *down   down     
+GE3/0/38                      *down   down     
+GE3/0/39                      *down   down     
+GE3/0/40                      *down   down     
+GE3/0/41                      *down   down     
+GE3/0/42                      *down   down     
+GE3/0/43                      *down   down     
+GE3/0/44                      *down   down     
+GE3/0/45                      *down   down     
+GE3/0/46                      *down   down     
+GE3/0/47                      *down   down     
+GE3/0/48                      up      up       
+GE3/0/49                      *down   down     
+GE3/0/50                      *down   down     
+GE3/0/51                      down    down     
+GE3/0/52                      down    down     
+NULL0                         up      up(s)    
+Vlanif1                       up      up       
+<HUAWEI>display acl all
+ Total nonempty ACL number is 0 
+
+<HUAWEI>display cpu
+CPU Usage Stat. Cycle: 60 (Second)
+CPU Usage            : 12% Max: 79%
+CPU Usage Stat. Time : 2000-08-23  05:49:20 
+CPU utilization for five seconds: 12%: one minute: 12%: five minutes: 12%
+Max CPU Usage Stat. Time : 2000-04-01 23:57:20.
+
+TaskName             CPU  Runtime(CPU Tick High/Tick Low)  Task Explanation
+VIDL                 88%         2/756ccfff       DOPRA IDLE                    
+OS                   10%         0/47868bff       Operation System              
+TICK                  1%         0/ b71b000                                     
+linkscan              1%         0/ 7de2900                                     
+AAA                   0%         0/       0       AAA  Authen Account Authorize 
+ACL                   0%         0/  3d0900       ACL Access Control List       
+ADPT                  0%         0/       0       ADPT Adapter                  
+AGNT                  0%         0/       0       AGNTSNMP agent task           
+AGT6                  0%         0/       0       AGT6SNMP AGT6 task            
+ALM                   0%         0/       0       ALM  Alarm Management         
+ALS                   0%         0/  3d0900       ALS  Loss of Signal           
+AM                    0%         0/       0       AM   Address Management       
+APP                   0%         0/       0       APP                           
+ARP                   0%         0/  1e8480       ARP                           
+ASFI                  0%         0/       0       ASFI                          
+ASFM                  0%         0/       0       ASFM                          
+ASMN                  0%         0/  1e8480       ASMNG Access Switch
+                                                  Management                   
+BFD                   0%         0/  b71b00       BFD Bidirection Forwarding
+                                                  Detect                       
+BOX_Out               0%         0/  d59f80                                     
+BPDU                  0%         0/       0       BPDU Adapter                  
+BTRC                  0%         0/       0       BTRC                          
+CAPM                  0%         0/       0       CAPM Capture Packet           
+CFM                   0%         0/       0       CFM Configuration file
+                                                  management                   
+CLKI                  0%         0/       0       CLKI                          
+CMAI                  0%         0/  1e8480       CMAINT                        
+CMD_Switching_lsn     0%         0/       0                                     
+CMRE                  0%         0/       0       CMREG Cloud Management
+                                                  Register                     
+CWPA                  0%         0/       0       CWPADP                        
+CWP_BUP               0%         0/       0       CWP_BUP                       
+CWP_CWP               0%         0/  1e8480       CWP_CWP                       
+CWP_DTLS              0%         0/       0       CWP_DTLS                      
+CWP_FWD               0%         0/       0       CWP_FWD                       
+DEFD                  0%         0/  1e8480       DEFD CPU Defend               
+DELM                  0%         0/       0       DELMAC delete mac address     
+DEV                   0%         0/       0       DEV  Device Management        
+DEVA                  0%         0/       0       DEVA Device Assistant         
+DHCP                  0%         0/ 3ef1480       DHCP Dynamic Host Config
+                                                  Protocol                     
+DLDP                  0%         0/  1e8480       DLDP Protocol                 
+EAP                   0%         0/       0       EAP  Extensible Authen
+                                                  Protocol                     
+ECM                   0%         0/  1e8480       ECM Ethernet Communicate
+                                                  Manage                       
+ECMM                  0%         0/  1e8480       ECMM Ethernet communication
+                                                  manage                       
+EDBG                  0%         0/  f42400       EDBG ECM Out                  
+EFMT                  0%         0/       0       EFMTEST 802.3AH Test          
+EOAM                  0%         0/  3d0900       EOAM1AG                       
+ESAP                  0%         0/  1e8480       ESAP eSap Adapter             
+ETHA                  0%         0/       0       ETHA                          
+EZDT                  0%         0/       0       EZDT                          
+EZOP                  0%         0/       0       EZOP EasyOperation
+                                                  application                  
+EZPP                  0%         0/       0       EZPP EasyOperation packet     
+FCAT                  0%         0/       0       FCAT Catch Packets for
+                                                  debugging                    
+FECD                  0%         0/  5b8d80       FECD Mod Manage Task          
+FIB                   0%         0/       0       FIB Forward Information Base  
+FIB6                  0%         0/       0       FIB6IPv6 FIB                  
+FLOW                  0%         0/       0       FLOW SFLOW                    
+FMAT                  0%         0/       0       FMATFault Manage task         
+FNTL                  0%         0/       0       FNTL                          
+FSP                   0%         0/       0       FSP  Stacking                 
+FTS                   0%         0/  7a1200       FTS                           
+GEM                   0%         0/       0       GEM task                      
+GEMR                  0%         0/       0       GEMRun task                   
+GRSA                  0%         0/       0       GRSA                          
+GVRP                  0%         0/       0       GVRP Protocol                 
+HACK                  0%         0/       0       HACKtask for HA ACK           
+HOTT                  0%         0/       0       HOTT                          
+HS2M                  0%         0/       0       HS2MHigh available task       
+HTPD                  0%         0/       0       HTPD HTTP process for portal  
+HTPSRD                0%         0/ 14fb180                                     
+HTTP                  0%         0/  989680       HTTP                          
+IFAD                  0%         0/       0       IFAD Ifnet Adpter             
+IFLP                  0%         0/       0       IFLP                          
+IFNT                  0%         0/       0       IFNTIfnet task                
+IFPD                  0%         0/ 7088980       IFPD Ifnet Product Adapter    
+INFO                  0%         0/  1e8480       INFOInformation center        
+INPT                  0%         0/       0       INPT                          
+INT                   0%         0/ 1ab3f00       INT                           
+IP                    0%         0/       0       IP                            
+IPCK                  0%         0/       0       IPCKIPC task for ack message  
+IPCQ                  0%         0/ 501bd00       IPCQIPC task for single queue 
+IPCR                  0%         0/       0       IPCR InterPro Communicate
+                                                  Receive                      
+ISC6                  0%         0/       0       ISC6                          
+IT_3                  0%         0/       0       IT_33                         
+IT_6                  0%         0/  3d0900       IT_68                         
+JOB                   0%         0/       0       JOB Schedule                  
+L2                    0%         0/  3d0900       L2                            
+L2IF                  0%         0/  7a1200       L2IF                          
+L2PQ                  0%         0/  1e8480       L2PQ                          
+L2_E                  0%         0/       0       L2_EOAM_Y1731                 
+L2_P                  0%         0/  5b8d80       L2_PR                         
+L2_R                  0%         0/ 1312d00       L2_RING                       
+L2_T                  0%         0/       0       L2_TRUNK                      
+L3I4                  0%         0/       0       L3I4 LPU Manage IPv4 unicast
+                                                  FDB                          
+L3IO                  0%         0/       0       L3IO LPU Process urpf, vrrp
+                                                  etc.                         
+L3M4                  0%         0/       0       L3M4 MPU Manage IPv4 unicast
+                                                  FDB                          
+L3MB                  0%         0/       0       L3MB MPU Process urpf, vrrp
+                                                  etc.                         
+LAGA                  0%         0/       0       LAGAGT                        
+LBDT                  0%         0/  989680       LBDT Loopback Detect Mpu      
+LDUP                  0%         0/       0       LDUP                          
+LGBF                  0%         0/       0       LGBF                          
+LINK                  0%         0/       0       LINK                          
+LLDP                  0%         0/       0       LLDP Protocol                 
+LNP                   0%         0/       0       LNP task                      
+LOAD                  0%         0/  1e8480       LOAD Load Software            
+MAC                   0%         0/  1e8480       MAC Media Access Control      
+MACL                  0%         0/       0       MACL Access Control List      
+MAD                   0%         0/       0       MAD Task                      
+MADP                  0%         0/       0       MADP MAD proxy Task           
+MBRB                  0%         0/       0       MBRB                          
+MCSW                  0%         0/       0       MCSW Mulitcast Switch Adapter 
+METH                  0%         0/  1e8480       METH Metropolitan Ethernet    
+MFF                   0%         0/       0       MFF MAC Forced Forwarding     
+MFIB                  0%         0/       0       MFIBMulticast forward info    
+MSYN                  0%         0/  5b8d80       MSYN Mac Synchronization      
+MTR                   0%         0/  3d0900       MTR Scheduled Memory Usage    
+Mirr                  0%         0/       0       Mirror                        
+NDIO                  0%         0/       0       NDIO LPU Manage IPv6 unicast
+                                                  FDB                          
+NDMB                  0%         0/       0       NDMB MPU Manage IPv6 unicast
+                                                  FDB                          
+NFPT                  0%         0/  b71b00       NFPTNFP timer task            
+NTLK                  0%         0/       0       NTLK                          
+NTPT                  0%         0/       0       NTPT task                     
+OAM                   0%         0/       0       OAM AGT MV                    
+OAM1                  0%         0/       0       OAM1 EOAM Adapter             
+OMMS                  0%         0/       0       OMMS                          
+PAT                   0%         0/       0       PAT                           
+PATC                  0%         0/       0       PATCH Maintenance             
+PNGI                  0%         0/  1e8480       PNGI                          
+PNGM                  0%         0/  1e8480       PNGM MPU Process icmp reply
+                                                  fast                         
+POE                   0%         0/       0       POE  Power Over Ethernet      
+POE+                  0%         0/       0       POE+ PPP Over Ethernet Plus   
+PPI                   0%         0/  1e8480       PPI Product Process Interface 
+PS                    0%         0/       0       PS   Portal local server      
+PTAL                  0%         0/       0       PTAL Portal                   
+QDIA                  0%         0/       0       QDIA AUTODIAG Application     
+RDS                   0%         0/       0       RDS  Radius                   
+RMON                  0%         0/  1e8480       RMONRemote monitoring         
+ROUT                  0%         0/ 6146580       ROUTRoute task                
+RPCQ                  0%         0/  989680       RPCQRemote procedure call     
+RTMR                  0%         0/  d59f80       RTMR                          
+SAM                   0%         0/       0       SAM  Service Agent Module     
+SAPP                  0%         0/       0       SAPP                          
+SDKD                  0%         0/ 1c9c380       SDKD                          
+SECE                  0%         0/  1e8480       SECE Security                 
+SER                   0%         0/       0       SER                           
+SFPT                  0%         0/ 6cb8080       SFPT Timer                    
+SLAG                  0%         0/       0       SLAG                          
+SMAG                  0%         0/       0       SMAG Smart Link Agent         
+SMLK                  0%         0/       0       SMLK Smart Link Protocol      
+SNPG                  0%         0/  1e8480       SNPG Multicast Snooping       
+SOCK                  0%         0/       0       SOCKPacket schedule and
+                                                  process                      
+SPM                   0%         0/       0       SPM  Smart Power Management   
+SRM                   0%         0/  d59f80       SRM  System Resource
+                                                  Management                   
+SRMI                  0%         0/       0       SRMI External Interrupt       
+SRMT                  0%         0/  d59f80       SRMT System Resource Manage
+                                                  Timer                        
+STFW                  0%         0/       0       STFW Super task forward       
+STND                  0%         0/       0       STNDStandby task              
+STP                   0%         0/ 6516e80       STP                           
+STRA                  0%         0/  3d0900       STRA Source Trail             
+TACH                  0%         0/  989680       TACHWTACACS                   
+TARP                  0%         0/       0       TARPING                       
+TCBM                  0%         0/       0       TCBM Task callback block
+                                                  monitor                      
+TM                    0%         0/       0       TM   Transmission Management  
+TNQA                  0%         0/  7a1200       TNQAC                         
+TOPO                  0%         0/       0       TOPOMNG Task                  
+TPLA                  0%         0/  1e8480       TPLA Template for access
+                                                  switch                       
+TRAP                  0%         0/       0       TRAPSNMP trap task            
+TRUN                  0%         0/       0       TRUNK Product Adapter         
+TTNQ                  0%         0/       0       TTNQAS                        
+TUNL                  0%         0/  1e8480       TUNL                          
+UCM                   0%         0/       0       UCM  User Control Management  
+UMBR                  0%         0/  1e8480       UMBR Member Discover Manage   
+UPG                   0%         0/  3d0900       UPG                           
+USA                   0%         0/  3d0900       USA User Service Agent        
+UTSK                  0%         0/       0       UTSK                          
+UVMA                  0%         0/       0       UVMA Unified version
+                                                  management                   
+VCLK                  0%         0/ 487ab00                                     
+VCMP                  0%         0/       0       VCMP task                     
+VFS                   0%         0/       0       VFS Virtual file system       
+VFSD                  0%         0/       0       VFSDVFS flash task for delete
+                                                  file block                   
+VMON                  0%         0/  1e8480       VMONSystem monitor            
+VMSH                  0%         0/       0       VMSH                          
+VP                    0%         0/       0       VP  Virtual path task         
+VPR                   0%         0/       0       VPR VP Receive                
+VPS                   0%         0/       0       VPS VP Send                   
+VRPT                  0%         0/       0       VRPT                          
+VRRP                  0%         0/ 14fb180       VRRP                          
+VT                    0%         0/       0       VT                            
+VT0                   0%         0/       0       VT0 Line user's task          
+VTYD                  0%         0/  d59f80       VTYDVirtual terminal          
+WEB                   0%         0/       0       WEB  Web                      
+WEB_                  0%         0/       0       WEB_WRITE_FILE                
+WT0                   0%         0/ 2faf080       WT0                           
+XQOS                  0%         0/       0       XQOS Quality of service       
+XSTP                  0%         0/       0       XSTP AGENT                    
+l2ag                  0%         0/       0       l2age                         
+l2au                  0%         0/       0       l2au_hnd                      
+l2st                  0%         0/       0       l2staticflp_hnd               
+l2sy                  0%         0/  1e8480       l2sync                        
+linkIntr              0%         0/       0                                     
+lshelp                0%         0/       0                                     
+mvlDPC                0%         0/       0                                     
+port_statistics       0%         0/  b71b00                                     
+rx_0                  0%         0/       0       rx_0                          
+rx_1                  0%         0/       0       rx_1                          
+rx_2                  0%         0/       0       rx_2                          
+rx_3                  0%         0/       0       rx_3                          
+rx_4                  0%         0/  1e8480       rx_4                          
+rx_5                  0%         0/       0       rx_5                          
+rx_6                  0%         0/       0       rx_6                          
+rx_7                  0%         0/       0       rx_7                          
+soft                  0%         0/  3d0900       soft_learn                    
+
+<HUAWEI>display memory-usage
+ Memory utilization statistics at 2000-08-23 05:49:21+08:00
+ System Total Memory Is: 354418688 bytes
+ Total Memory Used Is: 77016784 bytes
+ Memory Using Percentage Is: 21%
+<HUAWEI>display vrrp
+Info: No VRRP backup group is configured with a virtual IPv4 address.
+<HUAWEI>display device
+S5720-52P-LI-AC's Device status:
+Slot Sub  Type                  Online    Power    Register     Status   Role  
+-------------------------------------------------------------------------------
+3    -    S5720-52P-LI          Present   PowerOn  Registered   Normal   Master
+<HUAWEI>display power
+Info: There is no power information.
+<HUAWEI>display ip routing statistics
+Summary Prefixes : 5
+Proto     total      active      added        deleted      freed   
+          routes     routes      routes       routes       routes  
+DIRECT    4          4           4            0            0         
+STATIC    1          1           1            0            0         
+RIP       0          0           0            0            0         
+OSPF      0          0           0            0            0         
+UNR       0          0           0            0            0         
+Total     5          5           5            0            0         
+<HUAWEI>display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52P-LI-AC Routing Switch uptime is 20 weeks, 3 days, 5 hours, 55 minutes
+
+ES5D2T52S006 3(Master)  : uptime is 20 weeks, 3 days, 5 hours, 53 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 238        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0106 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+<HUAWEI>display elabel
+Warning: It may take a long time to excute this command. Continue? [Y/N]:y
+Info: It is executing, please wait...
+/$[System Integration Version]
+/$SystemIntegrationVersion=3.0
+
+
+[Slot_3]
+/$[Board Integration Version]
+/$BoardIntegrationVersion=3.0
+
+
+[Main_Board]
+
+/$[ArchivesInfoVersion]
+/$ArchivesInfoVersion=3.0
+
+
+[Board Properties]
+BoardType=S5720-52P-LI-AC
+BarCode=21980106002SJ5602777
+Item=98010600
+Description=S5720-52P-LI-AC(48 Ethernet 10/100/1000 ports,4 Gig SFP,AC power support)
+Manufactured=2018-05-15
+VendorName=Huawei
+IssueNumber=00
+CLEICode=
+BOM=
+
+
+
+
+[Port_GigabitEthernet3/0/49]
+/$[ArchivesInfo Version]
+/$ArchivesInfoVersion=3.0
+
+
+[Board Properties]
+BoardType=
+BarCode=
+Item=
+Description=
+Manufactured=
+/$VendorName=
+IssueNumber=
+CLEICode=
+BOM=
+
+
+[Port_GigabitEthernet3/0/50]
+/$[ArchivesInfo Version]
+/$ArchivesInfoVersion=3.0
+
+
+[Board Properties]
+BoardType=
+BarCode=
+Item=
+Description=
+Manufactured=
+/$VendorName=
+IssueNumber=
+CLEICode=
+BOM=
+
+
+[Port_GigabitEthernet3/0/51]
+/$[ArchivesInfo Version]
+/$ArchivesInfoVersion=3.0
+
+
+[Board Properties]
+BoardType=
+BarCode=
+Item=
+Description=
+Manufactured=
+/$VendorName=
+IssueNumber=
+CLEICode=
+BOM=
+
+
+[Port_GigabitEthernet3/0/52]
+/$[ArchivesInfo Version]
+/$ArchivesInfoVersion=3.0
+
+
+[Board Properties]
+BoardType=
+BarCode=
+Item=
+Description=
+Manufactured=
+/$VendorName=
+IssueNumber=
+CLEICode=
+BOM=
+
+<HUAWEI>display logbuffer

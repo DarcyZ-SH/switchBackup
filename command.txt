@@ -1,0 +1,19 @@
+display current
+display interface brief
+display ip interface brief
+display arp
+display mac-address
+display trapbuffer
+display alarm history
+display interface des
+display acl all
+display cpu
+display memory-usage
+display vrrp
+display device
+display power
+display ip routing statistics
+display version
+display elabel
+display interface
+display logbuffer
